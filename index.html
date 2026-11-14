@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIANA Beauty — Luxury Makeup Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <a href="#" class="brand">DIANA <span>Paris</span></a>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Cari produk atau shade...">
+            </div>
+
+            <button class="cart-trigger" id="openCartBtn">
+                <span>Tas Belanja</span>
+                <span class="cart-badge" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="tagline">NEW SEASON COLLECTION</span>
+                <h1>Keanggunan Alami dalam Setiap Sentuhan</h1>
+                <p>Diformulasikan dengan pigmen mineral halus dan ekstrak botani untuk hasil riasan tahan lama yang terasa ringan di kulit.</p>
+                <a href="#koleksi" class="btn-primary">Belanja Sekarang</a>
+            </div>
+            <div class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" alt="Koleksi Makeup Veloura">
+            </div>
+        </div>
+    </section>
+
+    <!-- Katalog Produk -->
+    <main id="koleksi" class="container catalog-section">
+        <div class="catalog-header">
+            <div>
+                <h2>Koleksi Pilihan</h2>
+                <p class="subtitle">Temukan rangkaian riasan wajah terbaik untuk tampilan sehari-hari maupun acara spesial.</p>
+            </div>
+            <div class="category-tabs" id="categoryTabs">
+                <button class="tab-btn active" data-category="Semua">Semua</button>
+                <button class="tab-btn" data-category="Lipstik">Lipstik</button>
+                <button class="tab-btn" data-category="Complexion">Complexion</button>
+                <button class="tab-btn" data-category="Mata">Mata</button>
+                <button class="tab-btn" data-category="Pipi">Pipi</button>
+            </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+    </main>
+
+    <!-- Drawer Keranjang Belanja -->
+    <div class="backdrop" id="backdrop"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="drawer-header">
+            <h3>Tas Belanja</h3>
+            <button class="icon-close" id="closeCartBtn">&times;</button>
+        </div>
+        <div class="drawer-body" id="cartList">
+            <p class="empty-state">Tas belanja Anda masih kosong.</p>
+        </div>
+        <div class="drawer-footer">
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">Rp 0</strong>
+            </div>
+            <button class="btn-primary w-100" id="checkoutBtn">Lanjut ke Pembayaran</button>
+        </div>
+    </aside>
+
+    <!-- Modal Detail & Pilih Shade -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-box">
+            <button class="icon-close modal-close" id="closeModalBtn">&times;</button>
+            <div class="modal-grid" id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Notifikasi -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-brand">DIANA <span>Paris</span></p>
+            <p class="footer-copy">&copy; 2026 Diana Beauty Indonesia. Dirancang untuk memancarkan pesona terbaikmu.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
